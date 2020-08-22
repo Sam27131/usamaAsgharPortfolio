@@ -235,6 +235,79 @@ html {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+  max-width: 100%;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+nav,
+p,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: black;
+  line-height: 29px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  text-align: center;
+}
+
 h1 {
   color: red;
+}
+
+.aboutContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bioContainer,
+.skillsContainer {
+  width: 50%;
+}
+
+.bioContainer h3,
+.skillsContainer h3 {
+  text-align: center;
+}
+
+.mySkills {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }

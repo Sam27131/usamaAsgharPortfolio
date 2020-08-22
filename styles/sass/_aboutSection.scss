@@ -1,0 +1,19 @@
+.aboutContainer {
+  display: flex;
+}
+
+.bioContainer,
+.skillsContainer {
+  width: 50%;
+}
+
+.bioContainer h3,
+.skillsContainer h3 {
+  text-align: center;
+}
+
+.mySkills {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
