@@ -1,5 +1,5 @@
 .about {
-  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 50px;
 }
 
 .aboutContainer {
@@ -14,6 +14,29 @@
 .bioContainer h3,
 .skillsContainer h3 {
   text-align: center;
+}
+
+.bioContainer{
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid $colour2;
+    margin: 0 auto;
+  }
+  p {
+    padding-top: 25px;
+  }
+  a {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 3rem;
+    color: lightskyblue;
+    transition: all 0.3s linear;
+  }
+  a:hover {
+    transform: scale(1.05);
+  }
 }
 
 .mySkills {

@@ -31,7 +31,15 @@ ul {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
+  color: $colour2;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+a:hover {
+  transform: scale(1.1);
 }
 
 img {
@@ -49,10 +57,8 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.95);
-  color: mintcream;
-  // background: #2B2B2B url(./assets/bg01.png) repeat;
-  // color: #D9D9D9;
+  background-color: $colour1;
+  color: $colour2;
   line-height: 29px;
   letter-spacing: 1px;
 }

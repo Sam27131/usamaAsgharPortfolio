@@ -258,7 +258,17 @@ ul {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 img {
@@ -276,8 +286,8 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.95);
-  color: mintcream;
+  background-color: black;
+  color: white;
   line-height: 29px;
   letter-spacing: 1px;
 }
@@ -288,23 +298,41 @@ h2 {
 }
 
 h1 {
+  display: none;
   padding: 25px 0;
   line-height: 100px;
-  font-size: 9rem;
+  font-size: 10rem;
   font-weight: 500;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 7rem;
   text-transform: capitalize;
   margin-bottom: 50px;
 }
 
-button {
+h2:after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: white;
+  margin: 50px 400px 0 400px;
+}
+
+h3 {
+  font-size: 3.5rem;
+  padding: 25px 0;
+  text-transform: capitalize;
+}
+
+button,
+.guitarAppOverlay button,
+input[type="submit"] {
+  font-size: 2.5rem;
   cursor: pointer;
   text-transform: capitalize;
   background-color: darkred;
-  color: mintcream;
+  color: white;
   border: none;
   border-radius: 10px;
   padding: 10px;
@@ -312,25 +340,27 @@ button {
   transition: all 0.3s linear;
 }
 
-button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+button {
+  padding: 25px 50px;
+  margin: 50px 0;
 }
 
-a {
-  color: mintcream;
-  text-transform: capitalize;
+button:hover,
+input[type="submit"]:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-section {
-  height: 100vh;
+.about,
+.projects,
+.contact {
+  padding-top: 50px;
 }
 
 .navContainer {
   padding: 15px 0;
-  border: 2px solid white;
   background-color: black;
-  text-align: center;
+  text-align: right;
 }
 
 .navContainer li {
@@ -341,18 +371,13 @@ section {
 
 .navContainer li a {
   padding: 0 25px;
-  color: #D9D9D9;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .navContainer a:hover {
-  background-color: mintcream;
+  background-color: white;
   color: black;
   border-radius: 10px;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 header {
@@ -370,10 +395,63 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+  background-image: url(./assets/stars.jpg);
+  background-size: cover;
+}
+
+header img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+.clouds {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/cloud.png);
+  -webkit-animation: animate 300s linear infinite;
+          animation: animate 300s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -5440px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -5440px;
+  }
+}
+
+.headerInfoContainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about {
-  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 50px;
 }
 
 .aboutContainer {
@@ -390,6 +468,32 @@ header {
 .bioContainer h3,
 .skillsContainer h3 {
   text-align: center;
+}
+
+.bioContainer img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin: 0 auto;
+}
+
+.bioContainer p {
+  padding-top: 25px;
+}
+
+.bioContainer a {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 3rem;
+  color: lightskyblue;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.bioContainer a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .mySkills {
@@ -420,6 +524,20 @@ header {
           transform: scale(1.1);
 }
 
+.projects {
+  padding-top: 50px;
+  background-color: white;
+  color: black;
+}
+
+.projects h2:after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: black;
+  margin: 50px 400px 0 400px;
+}
+
 .projectsContainer img {
   border: 2px solid black;
   border-radius: 15px;
@@ -432,6 +550,11 @@ header {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+}
+
+.projectsContainer a:hover {
+  -webkit-transform: none;
+          transform: none;
 }
 
 .guitarApp {
@@ -460,11 +583,8 @@ header {
   color: black;
 }
 
-.contact {
+.contactContainer {
   padding: 25px 200px;
-}
-
-.personalInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,4 +605,32 @@ header {
   width: 100%;
   padding: 15px;
   margin: 2px 0;
+}
+
+input[type="submit"] {
+  margin: 8px 0;
+  padding: 25px;
+}
+
+.footerContainer {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding-top: 25px;
+  font-size: 3rem;
+}
+
+.footerContainer .icons {
+  padding: 25px;
+}
+
+.footerContainer .icons a {
+  color: black;
+  padding: 5px 10px;
+  font-size: 3rem;
+}
+
+.footerContainer .icons a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
