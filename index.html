@@ -5,23 +5,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="./styles/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
 	<title>Usama Asghar Portfolio</title>
 </head>
 <body>
-	<nav class="wrapper">
-		<ul>
-			<li>home</li>
-			<li>about me</li>
-			<li>featured work</li>
-			<li>not sure yet</li>
-			<li>not sure yet</li>
+	<nav class="navContainer">
+		<ul class="wrapper">
+			<li><a href="">home</a></li>
+			<li><a href="">about</a></li>
+			<li><a href="">projects</a></li>
+			<li><a href="">contact</a></li>
 		</ul>
 	</nav>
 	<header class="wrapper">
-		<h1>I'm<span>Usama Asghar</span>A front-end web developer</h1>
-		<button>check me out</button>
+		<h1>I'm <span>Usama Asghar</span> <br> A front-end web developer</h1>
+		<div>
+			<button>check me out</button>
+		</div>
 	</header>
-	<section class="wrapper">
+	<section class="about wrapper">
 		<h2>about</h2>
 		<div class="aboutContainer">
 			<div class="bioContainer">
@@ -38,30 +40,39 @@
 				<h3>skills</h3>
 				<ul class="mySkills">
 					<li>
-						<h4>HTML5</h4>
+						<img src="./styles/assets/html5.svg" alt="HTML5 logo">
+						<!-- <h4>HTML5</h4> -->
 					</li>
 					<li>
-						<h4>CSS3</h4>
+						<img src="./styles/assets/css-5.svg" alt="CSS3 logo">
+						<!-- <h4>CSS3</h4> -->
 					</li>
 					<li>
-						<h4>SASS</h4>
+						<img src="./styles/assets/sass-1.svg" alt="SASS logo">
+						<!-- <h4>SASS</h4> -->
 					</li>
 					<li>
-						<h4>Javascript</h4>
+						<img src="./styles/assets/logo-javascript.svg" alt="Javascript logo">
+						<!-- <h4>Javascript</h4> -->
 					</li>
 					<li>
-						<h4>JQuery</h4>
+						<img src="./styles/assets/jquery-1.svg" alt="jquery logo">
+						<!-- <h4>JQuery</h4> -->
 					</li>
 					<li>
-						<h4>React</h4>
+						<img src="./styles/assets/react-2.svg" alt="React logo">
+						<!-- <h4>React</h4> -->
 					</li>
 					<li>
+						<img src="./styles/assets/firebase-1.svg" alt="Firebase logo">
 						<h4>Firebase</h4>
 					</li>
 					<li>
+						<img src="./styles/assets/git-icon.svg" alt="Git logo">
 						<h4>Git</h4>
 					</li>
 					<li>
+						<img src="./styles/assets/github-1.svg" alt="GitHub logo">
 						<h4>GitHub</h4>
 					</li>
 				</ul>
@@ -69,20 +80,79 @@
 		</div>
 	</section>
 	<section class="projects wrapper">
-		<div class="portfolioPeices">
-			<div></div>
-			<div></div>
-			<div></div>
+		<h2>projects</h2>
+		<div class="projectsContainer">
+			<div>
+				<h3>guitar chords app</h3>
+				<div class="guitarApp">
+					<img src="./styles/assets/guitarApp.png" alt="">
+					<div class="guitarAppOverlay">
+						<p>
+							An app built with React that shows users pictures of how to play guitar
+							chords.
+						</p>
+						<button>
+							<a href="https://sam27131.github.io/usamaAsgharProjectFive/">Check out the app!</a>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h3>guitar chords app</h3>
+				<div class="guitarApp">
+					<img src="./styles/assets/guitarApp.png" alt="">
+					<div class="guitarAppOverlay">
+						<p>
+							An app built with React that shows users pictures of how to play guitar
+							chords.
+						</p>
+						<button>
+							<a href="https://sam27131.github.io/usamaAsgharProjectFive/">Check out the app!</a>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h3>guitar chords app</h3>
+				<div class="guitarApp">
+					<img src="./styles/assets/guitarApp.png" alt="">
+					<div class="guitarAppOverlay">
+						<p>
+							An app built with React that shows users pictures of how to play guitar
+							chords.
+						</p>
+						<button>
+							<a href="https://sam27131.github.io/usamaAsgharProjectFive/">Check out the app!</a>
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
-	<section class="contact wrapper">
-		<form action="">
-
-		</form>
+	<section class="contactContainer wrapper">
+		<h2>Contact</h2>
+		<form class="contact">
+			<div class="personalInfo">
+				<label for="name"></label>
+				<input type="text" id="name" placeholder="Your Name">
+				<label for="email"></label>
+				<input type="email" id="email" placeholder="Your Email address">
+			</div>
+			<label for="message"></label>
+			<textarea id="message" placeholder="Message" rows="10" cols="50"></textarea>
+			<label for="submit"></label>
+			<input type="submit" id="submit" value="Submit">
+    </form>
 	</section>
 	<footer>
-
+		<div class="icons">
+				<i class="fab fa-facebook-f"></i>
+				<i class="fab fa-twitter"></i>
+				<i class="fab fa-instagram"></i>
+				<i class="fab fa-github"></i>
+		</div>
 	</footer>
+	<script src="https://kit.fontawesome.com/4f75015cbc.js" crossorigin="anonymous"></script>
 	<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
 </body>
 </html>

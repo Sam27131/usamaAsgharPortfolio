@@ -262,8 +262,8 @@ a {
 }
 
 img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 .wrapper {
@@ -273,19 +273,107 @@ img {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 2rem;
-  color: black;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: mintcream;
   line-height: 29px;
   letter-spacing: 1px;
 }
 
+h1,
 h2 {
   text-align: center;
 }
 
 h1 {
-  color: red;
+  padding: 25px 0;
+  line-height: 100px;
+  font-size: 9rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 5rem;
+  text-transform: capitalize;
+  margin-bottom: 50px;
+}
+
+button {
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: darkred;
+  color: mintcream;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+a {
+  color: mintcream;
+  text-transform: capitalize;
+}
+
+section {
+  height: 100vh;
+}
+
+.navContainer {
+  padding: 15px 0;
+  border: 2px solid white;
+  background-color: black;
+  text-align: center;
+}
+
+.navContainer li {
+  display: inline;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.navContainer li a {
+  padding: 0 25px;
+  color: #D9D9D9;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  font-size: 3rem;
+}
+
+.navContainer a:hover {
+  background-color: mintcream;
+  color: black;
+  border-radius: 10px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.about {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .aboutContainer {
@@ -310,4 +398,91 @@ h1 {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+}
+
+.mySkills li {
+  padding: 25px;
+}
+
+.mySkills li img {
+  padding: 10px;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.mySkills img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projectsContainer img {
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.projectsContainer {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.guitarApp {
+  position: relative;
+  margin: 10px 0;
+}
+
+.guitarAppOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.guitarApp:hover .guitarAppOverlay {
+  opacity: 1;
+  color: black;
+}
+
+.contact {
+  padding: 25px 200px;
+}
+
+.personalInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#name,
+#email,
+#message {
+  border: 5px solid black;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  margin: 2px 0;
 }

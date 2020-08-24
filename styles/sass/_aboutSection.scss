@@ -1,3 +1,7 @@
+.about {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .aboutContainer {
   display: flex;
 }
@@ -16,4 +20,21 @@
   text-align: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.mySkills li {
+  padding: 25px;
+  img {
+    padding: 10px;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+  }
+}
+
+.mySkills img:hover {
+  transform: scale(1.1);
 }

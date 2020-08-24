@@ -1,0 +1,27 @@
+.navContainer {
+  padding: 15px 0;
+  border: 2px solid white;
+  background-color: black;
+  text-align: center;
+  // position: fixed;
+  // top: 0;
+  // width: 100%;
+  li {
+    display: inline;
+    cursor: pointer;
+    text-transform: uppercase;
+    a {
+      padding: 0 25px;
+      color: #D9D9D9;
+      transition: all 0.2s linear;
+      font-size: 3rem;
+    }
+  }
+}
+
+.navContainer a:hover {
+  background-color: mintcream;
+  color: black;
+  border-radius: 10px;
+  transform: scale(1.5);;
+}

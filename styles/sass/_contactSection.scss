@@ -1,0 +1,19 @@
+.contact {
+  padding: 25px 200px;
+}
+
+.personalInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#name,
+#email,
+#message {
+  border: 5px solid black;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  margin: 2px 0;
+}
