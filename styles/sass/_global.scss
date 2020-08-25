@@ -15,6 +15,7 @@ h2 {
   font-size: 7rem;
   text-transform: capitalize;
   margin-bottom: 50px;
+  font-weight: 500;
 }
 
 h2:after {
@@ -32,7 +33,7 @@ h3 {
 }
 
 button,
-.guitarAppOverlay button,
+.appOverlay button,
 input[type="submit"] {
   font-size: 2.5rem;
   cursor: pointer;
@@ -55,12 +56,76 @@ input[type="submit"]:hover {
   transform: scale(1.05);
 }
 
-// section {
-//   height: 800px;
-// }
-
 .about,
 .projects,
 .contact {
   padding-top: 50px;
+}
+.about,
+.toTopContainer,
+.contact {
+  position: relative;
+}
+
+.toTop {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+
+.projects .toTop {
+  top: -35px;
+  color: $colour1;
+}
+
+// Media Queries //
+
+@media (max-width: 1050px) {
+  h2:after {
+    display: none;
+  }
+}
+
+@media (max-width: 660px) {
+  h1 {
+    font-size: 8.5rem;
+  }
+  
+  h2 {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 565px) {
+  h1 {
+    font-size: 7.5rem;
+    line-height: 75px;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 6.5rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 435px) {
+  h1 {
+    font-size: 5.5rem;
+    line-height: 65px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 4.5rem;
+  }
 }

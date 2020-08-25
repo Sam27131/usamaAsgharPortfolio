@@ -19,3 +19,16 @@ input[type="submit"] {
   margin: 8px 0;
   padding: 25px;
 }
+
+// Media Queries //
+@media (max-width: 1000px) {
+  .contactContainer {
+    padding: 25px 100px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contactContainer {
+    padding: 25px 0;
+  }
+}

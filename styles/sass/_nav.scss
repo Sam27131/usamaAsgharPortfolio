@@ -20,4 +20,13 @@
   background-color: $colour2;
   color: $colour1;
   border-radius: 10px;
+  transform: none;
+}
+
+// Media Queries //
+
+@media (max-width: 660px) {
+  ul {
+    display: none;
+  }
 }

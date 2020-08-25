@@ -8,7 +8,8 @@ myPortfolio.init = () => {
     myPortfolio.scrollToSection(".projectsLink", ".projects");
     myPortfolio.scrollToSection(".contactLink", ".contact");
     myPortfolio.scrollToSection(".start", ".about");
-    myPortfolio.headerSlide();
+    myPortfolio.scrollToSection(".toTop", "nav");
+    myPortfolio.headerEffects();
 }
 
 // Add smooth scrolling to the next questions by creating a click event on all a tags
@@ -22,7 +23,7 @@ myPortfolio.scrollToSection = (clicker, target) => {
   });
 };
 
-myPortfolio.headerSlide = () => {
+myPortfolio.headerEffects = () => {
   $('h1').slideDown(1000);
 }
 
