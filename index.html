@@ -9,8 +9,10 @@
 	<title>Usama Asghar Portfolio</title>
 </head>
 <body>
+	<label for="toggle"><i class="fas fa-bars"></i></label>
+	<input type="checkbox" id="toggle" name="toggle" />
 	<nav class="navContainer">
-		<ul class="wrapper">
+		<ul class="wrapper navLinks">
 			<li><a href="" class="homeLink">home</a></li>
 			<li><a href="" class="aboutLink">about</a></li>
 			<li><a href="" class="projectsLink">projects</a></li>
@@ -84,51 +86,68 @@
 		<div class="toTopContainer wrapper">
 			<a href="" class="toTop">back to top</a>
 			<h2>projects</h2>
-			<p>Hover over images to learn more.</p>
 			<div class="projectsContainer">
-				<div>
-					<h3>guitar chords app</h3>
-					<div class="app">
-						<img src="./styles/assets/guitarApp.png" alt="">
-						<div class="appOverlay">
-							<p>
-								An app built with React that shows users pictures of how to play guitar
-								chords.
-							</p>
-							<button>
-								<a href="https://sam27131.github.io/usamaAsgharProjectFive/">Check out the app!</a>
-							</button>
-						</div>
+				<div class="app">
+					<img src="./styles/assets/guitarApp.png" alt="">
+					<div class="appInfo">
+						<h3>guitar chords app</h3>
+						<p>
+							An app built in React using class components that shows users pictures of how to play guitar
+							chords. Initial states were set and updated on button clicks rendering chord images on the screen. Chord image URLs and user comments were stored and pulled from a Firebase database. 
+						</p>
+						<ul class="skillsUsed">
+							<li>React</li>
+							<li>Firebase</li>
+							<li>HTML5</li>
+							<li>CSS3</li>
+						</ul>
+						<button>
+							<a href="https://sam27131.github.io/usamaAsgharProjectFive/">live link</a>
+						</button>
+						<button>
+							<a href="https://github.com/Sam27131/usamaAsgharProjectFive.git">github</a>
+						</button>
 					</div>
 				</div>
-				<div>
-					<h3>game of thrones quiz</h3>
-					<div class="app">
-						<img src="./styles/assets/GOTQuiz.png" alt="">
-						<div class="appOverlay">
-							<p>
-								An app built with React that shows users pictures of how to play guitar
-								chords.
-							</p>
-							<button>
-								<a href="https://sam27131.github.io/usamaAsgharProjectThree/">Check out the app!</a>
-							</button>
-						</div>
+				<div class="app gotQuiz">
+					<div class="appInfo">
+						<h3>game of thrones quiz</h3>
+						<p>
+							A short personality quiz with a Game of Thrones theme. Users answer 5 questions and are shown a character from the show that matches their personality. Built with JQuery using if/else logic to calculate the results.
+						</p>
+						<ul class="skillsUsed gotSkillsUsed">
+							<li>JQuery</li>
+							<li>SASS</li>
+							<li>HTML5</li>
+						</ul>
+						<button>
+							<a href="https://sam27131.github.io/usamaAsgharProjectThree/">live link</a>
+						</button>
+						<button>
+							<a href="https://github.com/Sam27131/usamaAsgharProjectThree.git">github</a>
+						</button>
 					</div>
+					<img src="./styles/assets/GOTQuiz.png" alt="">
 				</div>
-				<div>
-					<h3>pokemon team builder</h3>
-					<div class="app">
-						<img src="./styles/assets/pokemon.png" alt="">
-						<div class="appOverlay">
-							<p>
-								An app built with React that shows users pictures of how to play guitar
-								chords.
-							</p>
-							<button>
-								<a href="http://helloim.cc/pokemonteambuilder/">Check out the app!</a>
-							</button>
-						</div>
+				<div class="app">
+					<img src="./styles/assets/pokemon.png" alt="">
+					<div class="appInfo">
+						<h3>pokemon team builder</h3>
+						<p>
+							A pokémon team builder app that lets users search for a pokémon and add it to their team. User input of a pokémon character name was matched with available pokémons from an API. A successful search results in a character name and character image being added to the screen. This is a pair-programming project built with colleague <a href="http://helloim.cc" class="colleague">Cici Zhang</a>
+						</p>
+						<ul class="skillsUsed">
+							<li>JQuery</li>
+							<li>API</li>
+							<li>HTML5</li>
+							<li>SASS</li>
+						</ul>
+						<button>
+							<a href="http://helloim.cc/pokemonteambuilder/">live link</a>
+						</button>
+						<button>
+							<a href="https://github.com/Elite-2/usamaAsgharCiciZhangProject4.git">github</a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -137,7 +156,13 @@
 	<section class="contact wrapper">
 		<a href="" class="toTop">back to top</a>
 		<h2>Contact</h2>
-		<form class="contactContainer">
+		<form 
+		action="mailto:usama_a123@hotmail.com" 
+		method=”POST”
+		enctype=”multipart/form-data”
+		name=”emailForm”
+		class="contactContainer"
+		>
 			<label for="name"></label>
 			<input type="text" id="name" placeholder="Your Name">
 			<label for="email"></label>
@@ -150,13 +175,13 @@
 	</section>
 	<footer class="footerContainer">
 		<div class="wrapper">
-			<div class="name">
-				<p>Usama Asghar</p>
+			<div>
+				<p>Built from the blood, sweat and tears of Usama Asghar</p>
 			</div>
 			<div class="icons">
-				<a href=""><i class="fab fa-twitter"></i></a>
-				<a href=""><i class="fab fa-github"></i></a>
-				<a href=""><i class="fab fa-linkedin"></i></a>
+				<a href="https://twitter.com/SamwiseCoding"><i class="fab fa-twitter"></i></a>
+				<a href="https://github.com/Sam27131"><i class="fab fa-github"></i></a>
+				<a href="https://www.linkedin.com/in/usama-asghar-183a2a98/"><i class="fab fa-linkedin"></i></a>
 			</div>
 		</div>
 	</footer>

@@ -33,7 +33,7 @@ h3 {
 }
 
 button,
-.appOverlay button,
+.appInfo button,
 input[type="submit"] {
   font-size: 2.5rem;
   cursor: pointer;
@@ -46,11 +46,6 @@ input[type="submit"] {
   transition: all 0.3s linear;
 }
 
-button {
-  padding: 25px 50px;
-  margin: 50px 0;
-}
-
 button:hover,
 input[type="submit"]:hover {
   transform: scale(1.05);
@@ -61,6 +56,7 @@ input[type="submit"]:hover {
 .contact {
   padding-top: 50px;
 }
+
 .about,
 .toTopContainer,
 .contact {
@@ -94,6 +90,10 @@ input[type="submit"]:hover {
   h2 {
     font-size: 5.5rem;
   }
+  
+  h3 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 565px) {
@@ -104,6 +104,10 @@ input[type="submit"]:hover {
 
   h2 {
     font-size: 4.5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
   }
 }
 

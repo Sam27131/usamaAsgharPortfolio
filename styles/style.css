@@ -327,7 +327,7 @@ h3 {
 }
 
 button,
-.appOverlay button,
+.appInfo button,
 input[type="submit"] {
   font-size: 2.5rem;
   cursor: pointer;
@@ -339,11 +339,6 @@ input[type="submit"] {
   padding: 10px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-}
-
-button {
-  padding: 25px 50px;
-  margin: 50px 0;
 }
 
 button:hover,
@@ -388,6 +383,9 @@ input[type="submit"]:hover {
   h2 {
     font-size: 5.5rem;
   }
+  h3 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 565px) {
@@ -397,6 +395,9 @@ input[type="submit"]:hover {
   }
   h2 {
     font-size: 4.5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
   }
 }
 
@@ -435,8 +436,9 @@ input[type="submit"]:hover {
 }
 
 .navContainer li a {
-  padding: 0 25px;
+  padding: 10px 25px;
   font-size: 2.5rem;
+  display: none;
 }
 
 .navContainer a:hover {
@@ -447,9 +449,65 @@ input[type="submit"]:hover {
           transform: none;
 }
 
-@media (max-width: 660px) {
-  ul {
-    display: none;
+.fa-bars {
+  display: none;
+}
+
+label[for="toggle"],
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .navContainer {
+    position: absolute;
+    right: -200px;
+    top: 0;
+    z-index: 999;
+  }
+  .navContainer .navLinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navContainer .navLinks li {
+    padding: 25px;
+  }
+  .navContainer .navLinks a {
+    font-size: 3rem;
+  }
+  .fa-bars {
+    position: relative;
+    z-index: 999;
+    display: block;
+    font-size: 4rem;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    padding: 20px;
+  }
+  .fa-bars:hover {
+    color: darkred;
+    cursor: pointer;
+    background-color: white;
+  }
+  label[for="toggle"] {
+    display: block;
+    font-size: 2rem;
+  }
+  input[type="checkbox"]:checked + .navContainer {
+    right: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
 }
 
@@ -457,13 +515,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -474,21 +525,26 @@ header {
 
 header img {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 15px;
+  left: 15px;
   height: 50px;
   width: 50px;
 }
 
+header button {
+  padding: 25px 50px;
+  margin: 50px 0;
+}
+
 .clouds {
   position: absolute;
-  top: 60px;
+  top: 80px;
   left: 0;
   width: 100%;
   height: 100%;
   background: url(./assets/cloud.png);
-  -webkit-animation: animate 1000s linear infinite;
-          animation: animate 1000s linear infinite;
+  -webkit-animation: animate 800s linear infinite;
+          animation: animate 800s linear infinite;
 }
 
 @-webkit-keyframes animate {
@@ -530,6 +586,12 @@ header img {
 @media (max-width: 900px) {
   header {
     background-image: url(./assets/sand.jpg);
+  }
+}
+
+@media (max-width: 600px) {
+  header img {
+    display: none;
   }
 }
 
@@ -672,10 +734,6 @@ header img {
   color: black;
 }
 
-.projects p {
-  text-align: center;
-}
-
 .projects h2:after {
   content: '';
   display: block;
@@ -684,18 +742,28 @@ header img {
   margin: 50px 400px 0 400px;
 }
 
+.projectsContainer .app {
+  position: relative;
+  margin: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .projectsContainer img {
   border: 2px solid black;
   border-radius: 15px;
+  width: 50%;
+  height: 300px;
 }
 
-.projectsContainer {
-  text-align: center;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+.projectsContainer .appInfo {
+  width: 35%;
 }
 
 .projectsContainer a:hover {
@@ -703,30 +771,35 @@ header img {
           transform: none;
 }
 
-.app {
-  position: relative;
-  margin: 10px 0;
-}
-
-.appOverlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
+.colleague {
+  color: lightskyblue;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 15px;
-  border-radius: 15px;
 }
 
-.app:hover .appOverlay {
-  opacity: 1;
-  color: black;
+.colleague:hover {
+  color: blue;
+}
+
+.skillsUsed {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  color: white;
+  margin: 25px 0;
+}
+
+.skillsUsed li {
+  background-color: black;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.gotSkillsUsed {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 @media (max-width: 1180px) {
@@ -748,30 +821,50 @@ header img {
   .projects h2:after {
     display: none;
   }
-}
-
-@media (max-width: 800px) {
-  .app {
-    margin: 10px;
+  .projectsContainer .app {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 25px 0;
+  }
+  .projectsContainer img {
+    height: initial;
+    width: 100%;
+  }
+  .projectsContainer .appInfo {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .skillsUsed {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projectsContainer .gotQuiz {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
-@media (max-width: 420px) {
-  .appOverlay p {
-    font-size: 1.5rem;
-  }
-  .appOverlay button {
+@media (max-width: 660px) {
+  .appInfo p {
     font-size: 2rem;
-    margin: 20px 0;
   }
 }
 
-@media (max-width: 340px) {
-  .appOverlay p {
-    line-height: 20px;
+@media (max-width: 565px) {
+  .appInfo p {
+    font-size: 1.8rem;
   }
-  .appOverlay button {
-    font-size: 1.5rem;
+}
+
+@media (max-width: 380px) {
+  .skillsUsed li {
+    font-size: 1.6rem;
   }
 }
 
@@ -831,7 +924,7 @@ input[type="submit"] {
 .footerContainer .icons a {
   color: black;
   padding: 5px 10px;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .footerContainer .icons a:hover {

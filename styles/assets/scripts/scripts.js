@@ -9,22 +9,24 @@ myPortfolio.init = () => {
     myPortfolio.scrollToSection(".contactLink", ".contact");
     myPortfolio.scrollToSection(".start", ".about");
     myPortfolio.scrollToSection(".toTop", "nav");
-    myPortfolio.headerEffects();
+    myPortfolio.headerEffects("h1");
+    myPortfolio.headerEffects(".navContainer li a");
 }
 
-// Add smooth scrolling to the next questions by creating a click event on all a tags
+// A function to add smooth scrolling to particular sections based on what arguments are passed in (see above)
 myPortfolio.scrollToSection = (clicker, target) => {
   $(clicker).on('click', function(event) {
       // Overriding default behavior
       event.preventDefault();
+
       $('html, body').animate({
           scrollTop: $(target).offset().top
       }, 800);
   });
 };
 
-myPortfolio.headerEffects = () => {
-  $('h1').slideDown(1000);
+myPortfolio.headerEffects = (target) => {
+  $(target).slideDown(800);
 }
 
 // Document ready function
