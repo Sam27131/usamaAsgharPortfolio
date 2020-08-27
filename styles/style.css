@@ -290,6 +290,7 @@ body {
   color: white;
   line-height: 29px;
   letter-spacing: 1px;
+  position: relative;
 }
 
 html,

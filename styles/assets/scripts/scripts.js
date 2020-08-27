@@ -33,4 +33,5 @@ myPortfolio.headerEffects = (target) => {
 // Document ready function
 $(function () {
   myPortfolio.init();
+  AOS.init();
 });
