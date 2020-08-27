@@ -21,6 +21,11 @@
   transform: none;
 }
 
+.navContainer,
+.navLinks {
+  overflow: hidden;
+}
+
 .fa-bars {
   display: none;
 }
