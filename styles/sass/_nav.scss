@@ -13,7 +13,8 @@
   }
 }
 
-.navContainer a:hover {
+.navContainer a:hover,
+.navContainer a:focus {
   background-color: $colour2;
   color: $colour1;
   border-radius: 10px;

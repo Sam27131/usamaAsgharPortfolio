@@ -266,7 +266,8 @@ a {
   transition: all 0.2s linear;
 }
 
-a:hover {
+a:hover,
+a:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -349,7 +350,9 @@ input[type="submit"] {
 }
 
 button:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+button:focus,
+input[type="submit"]:focus {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -447,7 +450,8 @@ input[type="submit"]:hover {
   font-size: 2.5rem;
 }
 
-.navContainer a:hover {
+.navContainer a:hover,
+.navContainer a:focus {
   background-color: white;
   color: black;
   border-radius: 10px;
@@ -649,14 +653,15 @@ header button {
   display: inline-block;
   margin: 10px 0;
   font-size: 3rem;
-  color: lightskyblue;
+  color: white;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
 .bioContainer a:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  color: lightskyblue;
+  -webkit-transform: none;
+          transform: none;
 }
 
 .mySkills {
@@ -783,13 +788,13 @@ header button {
 }
 
 .colleague {
-  color: lightskyblue;
+  color: darkred;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
 .colleague:hover {
-  color: blue;
+  color: lightskyblue;
 }
 
 .skillsUsed {
@@ -959,20 +964,34 @@ input[type="submit"] {
 
 .footerContainer .icons a {
   color: black;
-  padding: 5px 10px;
-  font-size: 5rem;
+  padding: 0 10px;
 }
 
-.footerContainer .icons a:hover {
+.footerContainer .icons i {
+  color: black;
+  padding: 5px 10px;
+  font-size: 5rem;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.footerContainer .icons i:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-@media (max-width: 360px) {
+@media (max-width: 420px) {
   .footerContainer p {
     font-size: 2.6rem;
   }
-  .footerContainer i {
-    font-size: 4rem;
+  .footerContainer .icons {
+    padding: 25px 0;
+  }
+  .footerContainer .icons a {
+    padding: 0 5px;
+  }
+  .footerContainer .icons i,
+  .footerContainer .icons p {
+    font-size: 2.5rem;
   }
 }

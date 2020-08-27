@@ -34,12 +34,12 @@
 }
 
 .colleague {
-  color: $colour4;
+  color: $colour3;
   transition: all 0.3s linear;
 }
 
 .colleague:hover {
-  color: blue;
+  color: $colour4;
 }
 
 .skillsUsed {

@@ -10,15 +10,17 @@
 	<title>Usama Asghar Portfolio</title>
 </head>
 <body>
+
 	<!-- Nav -->
+
 	<label for="toggle"><i class="fas fa-bars"></i></label>
 	<input type="checkbox" id="toggle" name="toggle" />
 	<nav class="navContainer">
 		<ul class="wrapper navLinks" data-aos="fade-left" data-aos-duration="1500">
-			<li><a href="" class="homeLink">home</a></li>
-			<li><a href="" class="aboutLink">about</a></li>
-			<li><a href="" class="projectsLink">projects</a></li>
-			<li><a href="" class="contactLink">contact</a></li>
+			<li ><a href="" class="homeLink">home</a></li>
+			<li ><a href="" class="aboutLink">about</a></li>
+			<li ><a href="" class="projectsLink">projects</a></li>
+			<li ><a href="" class="contactLink">contact</a></li>
 		</ul>
 	</nav>
 
@@ -173,20 +175,19 @@
 		</div>
 		<p>Send me a message below!</p>
 		<form 
-		action="mailto:usama_a123@hotmail.com" 
-		method=”POST”
-		enctype=”multipart/form-data”
+		action="https://formspree.io/xknqlogv"
+		method="POST"
 		name=”emailForm”
 		class="contactContainer"
 		>
 			<label for="name"></label>
-			<input type="text" id="name" placeholder="Your Name">
+			<input type="text" id="name" placeholder="Your Name" name="name" required>
 			<label for="email"></label>
-			<input type="email" id="email" placeholder="Your Email address">
+			<input type="email" id="email" placeholder="Your Email address" name="name" required>
 			<label for="message"></label>
-			<textarea id="message" placeholder="Message" rows="10" cols="50"></textarea>
+			<textarea id="message" placeholder="Message" rows="10" cols="50" name="name"></textarea>
 			<label for="submit"></label>
-			<input type="submit" id="submit" value="Submit">
+			<input type="submit" id="submit" value="Send">
     </form>
 	</section>
 
@@ -198,9 +199,9 @@
 				<p>🤘 Built by Usama Asghar 🤘</p>
 			</div>
 			<div class="icons">
-				<a href="https://twitter.com/SamwiseCoding"><i class="fab fa-twitter"></i></a>
-				<a href="https://github.com/Sam27131"><i class="fab fa-github"></i></a>
-				<a href="https://www.linkedin.com/in/usama-asghar-183a2a98/"><i class="fab fa-linkedin"></i></a>
+				<a href="https://twitter.com/SamwiseCoding"><i class="fab fa-twitter"></i><p>Twitter</p></a>
+				<a href="https://github.com/Sam27131"><i class="fab fa-github"></i><p>GitHub</p></a>
+				<a href="https://www.linkedin.com/in/usama-asghar-183a2a98/"><i class="fab fa-linkedin"></i><p>LinkedIn</p></a>
 			</div>
 		</div>
 	</footer>

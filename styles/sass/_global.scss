@@ -28,7 +28,8 @@ a {
   transition: all 0.2s linear;
 }
 
-a:hover {
+a:hover,
+a:focus {
   transform: scale(1.1);
 }
 
@@ -109,7 +110,9 @@ input[type="submit"] {
 }
 
 button:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+button:focus,
+input[type="submit"]:focus {
   transform: scale(1.05);
 }
 
