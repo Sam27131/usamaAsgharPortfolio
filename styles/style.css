@@ -290,6 +290,11 @@ body {
   color: white;
   line-height: 29px;
   letter-spacing: 1px;
+}
+
+html,
+.wrapper,
+body {
   overflow-x: hidden;
 }
 
@@ -311,6 +316,7 @@ h2 {
   text-transform: capitalize;
   margin-bottom: 50px;
   font-weight: 500;
+  padding: 15px 0;
 }
 
 h2:after {
@@ -363,7 +369,7 @@ input[type="submit"]:hover {
 .toTop {
   position: absolute;
   top: 15px;
-  right: 0;
+  right: 15px;
 }
 
 .projects .toTop {
@@ -867,6 +873,11 @@ header button {
   .skillsUsed li {
     font-size: 1.6rem;
   }
+}
+
+.contact p {
+  text-align: center;
+  margin: 25px 0;
 }
 
 .getInTouch {
