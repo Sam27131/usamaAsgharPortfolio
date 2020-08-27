@@ -25,6 +25,7 @@ myPortfolio.scrollToSection = (clicker, target) => {
   });
 };
 
+// A function to add sliding effects to elements
 myPortfolio.headerEffects = (target) => {
   $(target).slideDown(800);
 }

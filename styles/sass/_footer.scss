@@ -16,3 +16,16 @@
     }
   }
 }
+
+// Media Queries //
+
+@media (max-width: 360px) {
+  .footerContainer {
+    p {
+      font-size: 2.6rem;
+    }
+    i {
+      font-size: 4rem;
+    }
+  }
+}

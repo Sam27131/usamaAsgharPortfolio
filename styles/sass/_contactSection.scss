@@ -1,3 +1,17 @@
+.getInTouch {
+  display: flex;
+  justify-content: center;
+  a {
+    text-transform: initial;
+    padding: 15px;
+  }
+  img {
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+  }
+} 
+
 .contactContainer {
   padding: 25px 200px;
   display: flex;
@@ -21,6 +35,7 @@ input[type="submit"] {
 }
 
 // Media Queries //
+
 @media (max-width: 1000px) {
   .contactContainer {
     padding: 25px 100px;
@@ -30,5 +45,12 @@ input[type="submit"] {
 @media (max-width: 800px) {
   .contactContainer {
     padding: 25px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .getInTouch {
+    flex-direction: column;
+    align-items: center;
   }
 }

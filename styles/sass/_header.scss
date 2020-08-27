@@ -1,7 +1,7 @@
 header {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 750px;
   background-image: url(./assets/stars.jpg);
   background-size: cover;
   img {
@@ -22,7 +22,7 @@ header {
   top: 80px; 
   left: 0;
   width: 100%; 
-  height: 100%; 
+  height: 750px; 
   background: url(./assets/cloud.png);
   animation: animate 800s linear infinite; 
 }
@@ -43,6 +43,7 @@ header {
 }
 
 // Media Queries //
+
 @media (max-width: 900px) {
   header {
     background-image: url(./assets/sand.jpg);
@@ -51,7 +52,6 @@ header {
 
 @media (max-width: 600px) {
   header {
-    // align-items: flex-start;
     img {
       display: none;
     }
@@ -59,6 +59,7 @@ header {
 }
 
 // Reduced Motion Media Styles //
+
 @media (prefers-reduced-motion: reduce) {
   .clouds {
     animation: none;

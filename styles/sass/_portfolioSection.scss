@@ -42,39 +42,6 @@
   color: blue;
 }
 
-// .projectsContainer img {
-//   border: 2px solid $colour1;
-//   border-radius: 15px;
-//   width: 70%;
-// }
-
-
-// .app {
-//   position: relative;
-//   margin: 100px 0;
-//   display: flex;
-// }
-
-// .appOverlay {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   height: 100%;
-//   width: 100%;
-//   opacity: 0;
-//   transition: all 0.3s linear;
-//   background-color: hsla(0, 0%, 100%, .9);
-//   padding: 15px;
-//   border-radius: 15px;
-// }
-
-// .app:hover .appOverlay {
-//   opacity: 1;
-//   color: $colour1;
-// }
-
 .skillsUsed {
   text-align: center;
   display: grid;
@@ -92,6 +59,8 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+// Media Queries //
+
 @media (max-width: 1180px) {
   .projectsContainer {
     display: flex;
@@ -100,11 +69,6 @@
   .app {
     margin: 10px 100px;
   }
-
-  // .guitarAppOverlay {
-  //   position: initial;
-  //   opacity: 1;
-  // }
 }
 
 @media (max-width: 1050px) {
@@ -154,28 +118,3 @@
     font-size: 1.6rem;
   }
 }
-
-// @media (max-width: 800px) {
-//   .app {
-//     margin: 10px;
-//   }
-// }
-
-// @media (max-width: 420px) {
-//   .appOverlay p {
-//     font-size: 1.5rem;
-//   }
-//   .appOverlay button {
-//     font-size: 2rem;
-//     margin: 20px 0;
-//   }
-// }
-
-// @media (max-width: 340px) {
-//   .appOverlay p {
-//     line-height: 20px;
-//   }
-//   .appOverlay button {
-//     font-size: 1.5rem;
-//   }
-// }
