@@ -305,7 +305,6 @@ h2 {
 }
 
 h1 {
-  display: none;
   padding: 25px 0;
   line-height: 100px;
   font-size: 10rem;
@@ -446,7 +445,6 @@ input[type="submit"]:hover {
 .navContainer li a {
   padding: 10px 25px;
   font-size: 2.5rem;
-  display: none;
 }
 
 .navContainer a:hover {
@@ -944,18 +942,6 @@ input[type="submit"] {
 @media (max-width: 800px) {
   .contactContainer {
     padding: 25px 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .getInTouch {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
